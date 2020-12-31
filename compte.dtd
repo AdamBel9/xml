@@ -1,0 +1,84 @@
+<!ELEMENT compte (utilisateurs )>
+
+<!ELEMENT utilisateurs (utilisateur+)>
+<!ELEMENT utilisateur (photo1 ,actualites ,medias , avisAppeles ,typeMedias)>
+<!ATTLIST utilisateur id ID #REQUIRED>
+<!ATTLIST utilisateur nom CDATA #REQUIRED>
+<!ATTLIST utilisateur prenom CDATA #REQUIRED>
+<!ATTLIST utilisateur email CDATA #REQUIRED>
+<!ATTLIST utilisateur motDePasse CDATA #REQUIRED>
+<!ATTLIST utilisateur attribute1 CDATA #REQUIRED>
+
+<!ELEMENT photo1 EMPTY>
+
+<!ELEMENT actualites (actualite+)>
+<!ELEMENT actualite (commentaires,categories , videos ,photos)>
+<!ATTLIST actualite idActualite ID #REQUIRED>
+<!ATTLIST actualite titre CDATA #REQUIRED>
+<!ATTLIST actualite detail CDATA #REQUIRED>
+<!ATTLIST actualite date CDATA #REQUIRED>
+
+<!ELEMENT commentaires (commentaire+)>
+<!ELEMENT commentaire (#PCDATA)>
+<!ATTLIST commentaire idCommentaire ID #REQUIRED>
+<!ATTLIST commentaire etat CDATA #REQUIRED>
+
+<!ELEMENT categories (categorie+)>
+<!ELEMENT categorie EMPTY>
+<!ATTLIST categorie idCategories ID #REQUIRED>
+<!ATTLIST categorie libelle CDATA #REQUIRED>
+
+
+<!ELEMENT videos (video+)>
+<!ELEMENT video  EMPTY>
+<!ATTLIST video idVideo ID #REQUIRED>
+<!ATTLIST video link CDATA #REQUIRED>
+
+<!ELEMENT photo1 (photo+)>
+<!ELEMENT photo  EMPTY>
+<!ATTLIST photo idPhoto ID #REQUIRED>
+<!ATTLIST photo link CDATA #REQUIRED>
+
+<!ELEMENT medias (media+)>
+<!ELEMENT media  EMPTY>
+<!ATTLIST media idMedia ID #REQUIRED>
+<!ATTLIST media titre CDATA #REQUIRED>
+<!ATTLIST media date CDATA #REQUIRED>
+<!ATTLIST media detail CDATA #REQUIRED>
+<!ATTLIST media link CDATA #REQUIRED>
+<!ATTLIST media idTypeMedia IDREF #REQUIRED>
+
+
+<!ELEMENT avisAppeles (avisAppele+)>
+<!ELEMENT avisAppele  (conditions ,phases , piecesJointes , formulaires)>
+<!ATTLIST avisAppele idAvisAppele ID #REQUIRED>
+<!ATTLIST avisAppele titre CDATA #REQUIRED>
+<!ATTLIST avisAppele dateDebut CDATA #REQUIRED>
+<!ATTLIST avisAppele dateFin CDATA #REQUIRED>
+<!ATTLIST avisAppele detail CDATA #REQUIRED>
+
+
+<!ELEMENT conditions (condition+)>
+<!ELEMENT condition  EMPTY>
+<!ATTLIST condition idCondition ID #REQUIRED>
+<!ATTLIST condition libelle CDATA #REQUIRED>
+
+
+<!ELEMENT phases (phase+)>
+<!ELEMENT phase  EMPTY>
+<!ATTLIST phase idPhase ID #REQUIRED>
+<!ATTLIST phase libelle CDATA #REQUIRED>
+
+<!ELEMENT piecesJointes (piecesJointe+)>
+<!ELEMENT piecesJointe  EMPTY>
+<!ATTLIST piecesJointe idPiece ID #REQUIRED>
+<!ATTLIST piecesJointe libelle CDATA #REQUIRED>
+
+<!ELEMENT formulaires (formulaires+)>
+<!ELEMENT formulaires  EMPTY>
+<!ATTLIST formulaires idFormulaire ID #REQUIRED>
+<!ATTLIST formulaires libelle CDATA #REQUIRED>
+<!ATTLIST formulaires link CDATA #REQUIRED>
+
+
+
